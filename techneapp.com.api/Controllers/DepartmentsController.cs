@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using techneapp.com.application.Interface;
 using techneapp.com.domain;
 using techneapp.com.infrastructure;
 
@@ -16,9 +17,12 @@ namespace techneapp.com.api.Controllers
     {
         private readonly TechneAppDbContext _context;
 
-        public DepartmentsController(TechneAppDbContext context)
+        private readonly IDepartmentApplicationService _departmentApplicationService;
+
+        public DepartmentsController(TechneAppDbContext context, IDepartmentApplicationService departmentApplicationService)
         {
             _context = context;
+            _departmentApplicationService  = departmentApplicationService;
         }
 
         [HttpGet]
@@ -30,11 +34,12 @@ namespace techneapp.com.api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Department>> GetDepartment(int id)
         {
-            var department = await _context.Departments.FindAsync(id);
+
+            var department = await _departmentApplicationService.GetDepartment(id);
 
             if (department == null)
             {
-                return NotFound();
+                return StatusCode(404, "Invalid department ID, department Details not Found");
             }
 
             return department;
@@ -44,12 +49,7 @@ namespace techneapp.com.api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDepartment(int id, Department department)
         {
-            if (id != department.ID)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(department).State = EntityState.Modified;
+            await _departmentApplicationService.PutDepartment(id, department);
 
             try
             {
@@ -59,40 +59,62 @@ namespace techneapp.com.api.Controllers
             {
                 if (!DepartmentExists(id))
                 {
-                    return NotFound();
+                    return StatusCode(404, "Invalid Department ID, Insert a Valid Department ID");
                 }
                 else
                 {
-                    throw;
+                    return StatusCode(500, "Internal server error");
                 }
             }
 
-            return NoContent();
+            return StatusCode(200, "Department Details Updated Successfully");
         }
 
         [HttpPost]
         public async Task<ActionResult<Department>> PostDepartment(Department department)
         {
-            _context.Departments.Add(department);
-            await _context.SaveChangesAsync();
+            await _departmentApplicationService.PostDepartment(department);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (DepartmentExists(department.ID))
+                {
+                    return StatusCode(409, "Duplication of department ID, Change the department ID and Try Again");
+                }
+                else
+                {
+                    return StatusCode(500, "Internal server error");
+                }
+            }
 
-            return CreatedAtAction("GetDepartment", new { id = department.ID }, department);
+            return StatusCode(200, "Department Details Addedd Successfully");
         }
 
 
         [HttpDelete("{id}")]
         public async Task<ActionResult<Department>> DeleteDepartment(int id)
         {
-            var department = await _context.Departments.FindAsync(id);
-            if (department == null)
+            await _departmentApplicationService.DeleteDepartment(id);
+            try
             {
-                return NotFound();
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (DepartmentExists(id))
+                {
+                    return StatusCode(409, "Delete Process Failed, Try Again");
+                }
+                else
+                {
+                    return StatusCode(500, "Internal server error");
+                }
             }
 
-            _context.Departments.Remove(department);
-            await _context.SaveChangesAsync();
-
-            return department;
+            return StatusCode(200, "Department Details Deleted Successfully");
         }
 
         private bool DepartmentExists(int id)

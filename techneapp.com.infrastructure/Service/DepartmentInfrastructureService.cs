@@ -9,19 +9,52 @@ namespace techneapp.com.infrastructure.Service
 {
     public class DepartmentInfrastructureService : IDepartmentInfrastructureService
     {
-        public Task<int> DeleteDepartment(int id)
+        public readonly ITechneAppDbContext _context;
+
+        public int status = 0;
+        public DepartmentInfrastructureService(ITechneAppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task<int> DeleteDepartment(int id)
+        {
+            var department = await _context.Departments.FindAsync(id);
+            if (department == null)
+            {
+                return status;
+            }
+
+            _context.Departments.Remove(department);
+            status = await _context.SaveChangesAsync();
+
+            return status;
         }
 
-        public Task<int> PostDepartment(Department department)
+        public async Task<int> PostDepartment(Department department)
         {
-            throw new NotImplementedException();
+            Department newDepartment = new Department()
+            {
+                ID = department.ID,
+                DepartmentName = department.DepartmentName
+            };
+
+            _context.Departments.Add(newDepartment);
+            status = await _context.SaveChangesAsync();
+            return status;
         }
 
-        public Task<int> PutDepartment(int id, Department department)
+        public async Task<int> PutDepartment(int id, Department department)
         {
-            throw new NotImplementedException();
+            var currentDepartment = await _context.Departments.FindAsync(id);
+            if (currentDepartment == null)
+            {
+                return status;
+            }
+
+            _context.Departments.Update(department);
+            status = await _context.SaveChangesAsync();
+
+            return status;
         }
     }
 }

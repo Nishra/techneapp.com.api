@@ -8,7 +8,7 @@ namespace techneapp.com.application.Interface
 {
     public interface IDepartmentApplicationService
     {
-        public Task<Department> GetDepartments();
+        public Task<List<domain.Department>> GetDepartments();
 
         public Task<Department> GetDepartment(int id);
 
