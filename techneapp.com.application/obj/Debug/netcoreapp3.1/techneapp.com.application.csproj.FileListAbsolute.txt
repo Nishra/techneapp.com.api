@@ -1,0 +1,17 @@
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.application.deps.json
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.application.runtimeconfig.json
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.application.runtimeconfig.dev.json
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.application.dll
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.application.pdb
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.domain.dll
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.infrastructure.dll
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.domain.pdb
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\bin\Debug\netcoreapp3.1\techneapp.com.infrastructure.pdb
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\obj\Debug\netcoreapp3.1\techneapp.com.application.csprojAssemblyReference.cache
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\obj\Debug\netcoreapp3.1\techneapp.com.application.AssemblyInfoInputs.cache
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\obj\Debug\netcoreapp3.1\techneapp.com.application.AssemblyInfo.cs
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\obj\Debug\netcoreapp3.1\techneapp.com.application.csproj.CoreCompileInputs.cache
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\obj\Debug\netcoreapp3.1\techneapp.com.application.csproj.CopyComplete
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\obj\Debug\netcoreapp3.1\techneapp.com.application.dll
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\obj\Debug\netcoreapp3.1\techneapp.com.application.pdb
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.application\obj\Debug\netcoreapp3.1\techneapp.com.application.genruntimeconfig.cache

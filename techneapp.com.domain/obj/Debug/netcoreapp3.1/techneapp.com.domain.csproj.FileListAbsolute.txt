@@ -1,12 +1,12 @@
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\bin\Debug\netcoreapp3.1\techneapp.com.domain.deps.json
-F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\bin\Debug\netcoreapp3.1\techneapp.com.domain.dll
-F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.AssemblyInfoInputs.cache
-F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.AssemblyInfo.cs
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\bin\Debug\netcoreapp3.1\techneapp.com.domain.runtimeconfig.json
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\bin\Debug\netcoreapp3.1\techneapp.com.domain.runtimeconfig.dev.json
-F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.genruntimeconfig.cache
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\bin\Debug\netcoreapp3.1\techneapp.com.domain.dll
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\bin\Debug\netcoreapp3.1\techneapp.com.domain.pdb
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.AssemblyInfoInputs.cache
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.AssemblyInfo.cs
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.csproj.CoreCompileInputs.cache
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.dll
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.pdb
+F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.genruntimeconfig.cache
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.csprojAssemblyReference.cache

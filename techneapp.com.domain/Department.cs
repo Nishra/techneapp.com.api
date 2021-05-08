@@ -6,16 +6,16 @@ using System.Text;
 
 namespace techneapp.com.domain
 {
-    [Table(name: "Department")]
-    public class Department
-    {
-        [ForeignKey("ID")]
-        public int ID { get; set; }
+        [Table(name: "Department")]
+        public class Department
+        {
+            [Key]
+            public int ID { get; set; }
 
-        [Column(TypeName = "varchar(500)")]
-        [Required]
-        public string DepartmentName { get; set; }
+            [Column(TypeName = "varchar(500)")]
+            [Required]
+            public string DepartmentName { get; set; }
 
-        public ICollection<Employee> Employees { get; set; }
+            public ICollection<Employee> Employees { get; set; }
+        }
     }
-}

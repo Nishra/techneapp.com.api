@@ -6,6 +6,7 @@ using System.Text;
 
 namespace techneapp.com.domain
 {
+
     [Table(name: "Employee")]
     public class Employee
     {
@@ -20,9 +21,8 @@ namespace techneapp.com.domain
         [Required]
         public string Email { get; set; }
 
-        [Column(TypeName = "varchar(500)")]
         [Required]
-        public Department Depatment { get; set; }
+        public int DepartmentID { get; set; }
 
         [Column(TypeName = "varchar(500)")]
         [Required]

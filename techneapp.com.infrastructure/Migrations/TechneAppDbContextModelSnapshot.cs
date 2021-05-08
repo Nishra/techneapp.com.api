@@ -41,7 +41,7 @@ namespace techneapp.com.infrastructure.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int>("DepatmentID")
+                    b.Property<int>("DepartmentID")
                         .HasColumnType("integer");
 
                     b.Property<string>("Email")
@@ -58,20 +58,18 @@ namespace techneapp.com.infrastructure.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("DepatmentID");
+                    b.HasIndex("DepartmentID");
 
                     b.ToTable("Employee");
                 });
 
             modelBuilder.Entity("techneapp.com.domain.Employee", b =>
                 {
-                    b.HasOne("techneapp.com.domain.Department", "Depatment")
+                    b.HasOne("techneapp.com.domain.Department", null)
                         .WithMany("Employees")
-                        .HasForeignKey("DepatmentID")
+                        .HasForeignKey("DepartmentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Depatment");
                 });
 
             modelBuilder.Entity("techneapp.com.domain.Department", b =>

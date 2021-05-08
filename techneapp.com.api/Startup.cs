@@ -12,7 +12,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using techneapp.com.application.Interface;
+using techneapp.com.application.Service;
 using techneapp.com.infrastructure;
+using techneapp.com.infrastructure.Interface;
+using techneapp.com.infrastructure.Service;
 
 namespace techneapp.com.api
 {
@@ -38,7 +42,13 @@ namespace techneapp.com.api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TechneApp API", Version = "v1" });
             });
 
-            services.AddScoped<ITechneAppDbContext,TechneAppDbContext>();
+            services.AddTransient<ITechneAppDbContext,TechneAppDbContext>();
+
+            services.AddScoped<IDepartmentApplicationService, DepartmentApplicationService>();
+            services.AddScoped<IEmployeeApplicationService, EmployeeApplicationService>();
+
+            services.AddScoped<IDepartmentInfrastructureService, DepartmentInfrastructureService>();
+            services.AddScoped<IEmployeeInfrastructureService, EmployeeInfrastructureService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
