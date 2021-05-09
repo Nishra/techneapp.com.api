@@ -43,6 +43,19 @@ namespace techneapp.com.api.Controllers
             return employee;
         }
 
+        [HttpGet("{id}/getEmployeeDepartment")]
+        public async Task<ActionResult<Department>> GetEmployeeDepartment(int id)
+        {
+            var employeeDepartment = await _employeeApplicationService.GetEmployeeDepartment(id);
+
+            if (employeeDepartment == null)
+            {
+                return StatusCode(404, "Invalid employee ID, employee Department not Found");
+            }
+
+            return employeeDepartment;
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployee(int id, Employee employee)
         {

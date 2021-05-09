@@ -31,6 +31,13 @@ namespace techneapp.com.application.Service
             return employee;
         }
 
+        public async Task<Department> GetEmployeeDepartment(int id)
+        {
+            var employee = await _context.Employees.FindAsync(id);
+            var deparment = await _context.Departments.FindAsync(employee.DepartmentID);
+            return deparment;
+        }
+
         public async Task<List<domain.Employee>> GetEmployees()
         {
             List<domain.Employee> employee = await _context.Employees.ToListAsync();

@@ -10,6 +10,8 @@ namespace techneapp.com.application.Interface
     {
         public Task<List<domain.Employee>> GetEmployees();
 
+        public Task<Department> GetEmployeeDepartment(int id);
+
         public Task<Employee> GetEmployee(int id);
 
         public Task<int> PutEmployee(int id, Employee employee);

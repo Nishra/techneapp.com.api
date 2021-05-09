@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using techneapp.com.domain;
@@ -36,8 +37,8 @@ namespace techneapp.com.infrastructure.Service
             {
                 EmployeeName = employee.EmployeeName,
                 Email = employee.Email,
-                DepartmentID = employee.DepartmentID,
                 ImageURL = employee.ImageURL,
+                DepartmentID = employee.DepartmentID,
                 ID = employee.ID
             };
 
@@ -54,7 +55,16 @@ namespace techneapp.com.infrastructure.Service
                 return status;
             }
 
-            _context.Employees.Update(employee);
+            Employee updatedEmployee = new Employee()
+            {
+                EmployeeName = employee.EmployeeName,
+                Email = employee.Email,
+                ImageURL = employee.ImageURL,
+                DepartmentID = employee.DepartmentID,
+                ID = employee.ID
+            };
+
+            _context.Employees.Update(updatedEmployee);
             status = await _context.SaveChangesAsync();
 
             return status;
