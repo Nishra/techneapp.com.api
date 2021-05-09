@@ -1,5 +1,5 @@
 # techneapp.com.api
 
-## hosted API
+## Hosted API
 
 https://techneapp.herokuapp.com/index.html
