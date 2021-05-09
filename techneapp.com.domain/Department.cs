@@ -15,7 +15,5 @@ namespace techneapp.com.domain
             [Column(TypeName = "varchar(500)")]
             [Required]
             public string DepartmentName { get; set; }
-
-            public ICollection<Employee> Employees { get; set; }
         }
     }

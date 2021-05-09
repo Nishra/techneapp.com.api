@@ -9,4 +9,3 @@ F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\net
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.dll
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.pdb
 F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.genruntimeconfig.cache
-F:\techneapp.com\BackendApi\techneapp.com.api\techneapp.com.domain\obj\Debug\netcoreapp3.1\techneapp.com.domain.csprojAssemblyReference.cache
